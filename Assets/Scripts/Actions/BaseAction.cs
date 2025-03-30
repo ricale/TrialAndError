@@ -79,4 +79,14 @@ public abstract class BaseAction : MonoBehaviour
     }
 
     public abstract EnemyAIAction GetEnemyAIAction(GridPosition gridPosition);
+
+    protected void SetFlipXForCamera(Vector3 dir)
+    {
+        Vector3 camSpaceDir = Camera.main.transform.InverseTransformDirection(dir);
+        SpriteRenderer spriteRenderer = unit.GetSpriteRenderer();
+        if(spriteRenderer)
+        {
+            spriteRenderer.flipX = camSpaceDir.x >= 0;
+        }
+    }
 }

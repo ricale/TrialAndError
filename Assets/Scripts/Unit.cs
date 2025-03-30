@@ -12,6 +12,7 @@ public class Unit : MonoBehaviour
     public static event EventHandler OnAnyUnitDead;
 
     [SerializeField] private bool isEnemy;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
     private GridPosition gridPosition;
     private HealthSystem healthSystem;
@@ -141,5 +142,10 @@ public class Unit : MonoBehaviour
     public float GetHealthNormalized()
     {
         return healthSystem.GetHealthNormalized();
+    }
+
+    public SpriteRenderer GetSpriteRenderer()
+    {
+        return spriteRenderer;
     }
 }

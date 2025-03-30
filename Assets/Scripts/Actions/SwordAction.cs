@@ -32,13 +32,8 @@ public class SwordAction : BaseAction
         switch(state)
         {
             case State.SwingingSwordBeforeHit:
-                // Vector3 aimDir = (targetUnit.GetWorldPosition() - unit.GetWorldPosition()).normalized;
-                // float rotateSpeed = 10f;
-                // transform.forward = Vector3.Lerp(
-                //     transform.forward,
-                //     aimDir,
-                //     Time.deltaTime * rotateSpeed
-                // );
+                Vector3 aimDir = (targetUnit.GetWorldPosition() - unit.GetWorldPosition()).normalized;
+                SetFlipXForCamera(aimDir);
                 break;
             case State.SwingingSwordAfterHit:
                 break;
