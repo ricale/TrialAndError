@@ -31,18 +31,18 @@ public class UnitAnimator : MonoBehaviour
 
     private void Start()
     {
-        EquipRifle();
+        // EquipRifle();
     }
 
     private void SwordAction_OnSwordActionStarted(object sender, EventArgs e)
     {
-        EquipSword();
+        // EquipSword();
         animator.SetTrigger("SwordSlash");
     }
 
     private void SwordAction_OnSwordActionCompleted(object sender, EventArgs e)
     {
-        EquipRifle();
+        // EquipRifle();
     }
 
     private void MoveAction_OnStartMoving(object sender, EventArgs e)
@@ -71,13 +71,13 @@ public class UnitAnimator : MonoBehaviour
 
     private void EquipSword()
     {
-        swordTransform.gameObject.SetActive(true);
-        rifleTransform.gameObject.SetActive(false);
+        // swordTransform.gameObject.SetActive(true);
+        // rifleTransform.gameObject.SetActive(false);
     }
 
     private void EquipRifle()
     {
-        swordTransform.gameObject.SetActive(false);
-        rifleTransform.gameObject.SetActive(true);
+        // swordTransform.gameObject.SetActive(false);
+        // rifleTransform.gameObject.SetActive(true);
     }
 }
