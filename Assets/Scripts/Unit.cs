@@ -17,7 +17,7 @@ public class Unit : MonoBehaviour
     private GridPosition gridPosition;
     private HealthSystem healthSystem;
     private BaseAction[] baseActionArray;
-    private int actionPoints = ACTION_POINTS_MAX;
+    private int actionPoints = 0;
 
     private void Awake()
     {
@@ -30,6 +30,7 @@ public class Unit : MonoBehaviour
         gridPosition = LevelGrid.Instance.GetGridPosition(transform.position);
         LevelGrid.Instance.AddUnitAtGridPosition(gridPosition, this);
 
+        TurnSystem.Instance.AddUnit(this);
         TurnSystem.Instance.OnTurnChanged += TurnSystem_OnTurnChanged;
 
         healthSystem.OnDead += HealthSystem_OnDead;
@@ -112,11 +113,20 @@ public class Unit : MonoBehaviour
 
     private void TurnSystem_OnTurnChanged(object sender, EventArgs e)
     {
-        if((IsEnemy() && !TurnSystem.Instance.IsPlayerTurn()) ||
-            (!IsEnemy() && TurnSystem.Instance.IsPlayerTurn()))
+        // if((IsEnemy() && !TurnSystem.Instance.IsPlayerTurn()) ||
+        //     (!IsEnemy() && TurnSystem.Instance.IsPlayerTurn()))
+        // {
+        //     actionPoints = ACTION_POINTS_MAX;
+
+        //     OnAnyActionPointsChanged?.Invoke(this, EventArgs.Empty);
+        // }
+        if(TurnSystem.Instance.GetPreviousTurnUnit() == this)
+        {
+            actionPoints = 0;
+            OnAnyActionPointsChanged?.Invoke(this, EventArgs.Empty);
+        } else if(TurnSystem.Instance.GetCurrentTurnUnit() == this)
         {
             actionPoints = ACTION_POINTS_MAX;
-
             OnAnyActionPointsChanged?.Invoke(this, EventArgs.Empty);
         }
     }

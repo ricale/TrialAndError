@@ -1,1 +1,1 @@
-강의 [Unity Turn-Based Strategy Game: Intermediate C# Coding](https://www.udemy.com/course/unity-turn-based-strategy/) 수강하며 따라한 코드.
+https://github.com/ricale/TurnBasedStrategyCourseExample 기반으로 구현해보는 게임.
