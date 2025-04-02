@@ -9,6 +9,7 @@ public class TurnSystem : MonoBehaviour
 
     public event EventHandler OnTurnChanged;
 
+    // NOTE(kangseong): 지금까지는 `Unit` 이랑 배타적이었는데.. 이렇게 목록을 갖는 게 좋은 구조일까?
     private List<Unit> unitList;
     private int currentUnitNumber = -1;
     private int turnNumber = 1;
@@ -29,6 +30,7 @@ public class TurnSystem : MonoBehaviour
     public void AddUnit(Unit unit)
     {
         unitList.Add(unit);
+        unitList.Sort((a, b) => b.GetMovementPriority() - a.GetMovementPriority());
     }
 
     public void RemoveUnit(Unit unit)
@@ -38,13 +40,13 @@ public class TurnSystem : MonoBehaviour
 
     public void NextTurn()
     {
-        Debug.Log(">>> NextTurn");
         currentUnitNumber += 1;
         if(currentUnitNumber >= unitList.Count)
         {
             currentUnitNumber = 0;
             turnNumber += 1;
         }
+        Debug.Log(">>> NextTurn: " + currentUnitNumber + ", " + GetCurrentTurnUnit().GetMovementPriority());
         // turnNumber++;
         // isPlayerTurn = !isPlayerTurn;
         OnTurnChanged?.Invoke(this, EventArgs.Empty);

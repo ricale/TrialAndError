@@ -15,12 +15,14 @@ public class Unit : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     private GridPosition gridPosition;
+    private UnitStatus unitStatus;
     private HealthSystem healthSystem;
     private BaseAction[] baseActionArray;
     private int actionPoints = 0;
 
     private void Awake()
     {
+        unitStatus = GetComponent<UnitStatus>();
         healthSystem = GetComponent<HealthSystem>();
         baseActionArray = GetComponents<BaseAction>();
     }
@@ -157,5 +159,10 @@ public class Unit : MonoBehaviour
     public SpriteRenderer GetSpriteRenderer()
     {
         return spriteRenderer;
+    }
+
+    public int GetMovementPriority()
+    {
+        return unitStatus.GetMovementPriority();
     }
 }

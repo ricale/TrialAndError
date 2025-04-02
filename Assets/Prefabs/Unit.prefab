@@ -441,7 +441,9 @@ GameObject:
   - component: {fileID: -639873031978426173}
   - component: {fileID: -1282712946011624109}
   - component: {fileID: 695472747532347436}
+  - component: {fileID: 7975502419669342298}
   - component: {fileID: -1392918003490053921}
+  - component: {fileID: 7586111342768979637}
   m_Layer: 7
   m_Name: Unit
   m_TagString: Untagged
@@ -590,6 +592,18 @@ MonoBehaviour:
   shootPointTransform: {fileID: 0}
   rifleTransform: {fileID: 0}
   swordTransform: {fileID: 0}
+--- !u!114 &7975502419669342298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785670547301245326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510ed7446e52c4e3fb0d6183259261c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-1392918003490053921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -603,6 +617,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+--- !u!114 &7586111342768979637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785670547301245326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a5f85fee331840d581e29b45f8e2b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 0
+  mana: 0
+  skill: 0
+  agility: 0
+  defense: 0
+  maginDefense: 0
+  movementSpeed: 0
 --- !u!1 &8987954935600955569
 GameObject:
   m_ObjectHideFlags: 0

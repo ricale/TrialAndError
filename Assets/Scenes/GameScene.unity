@@ -1809,7 +1809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da39318056b0b4c2190c42c1f0646f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedUnit: {fileID: 1719726359}
+  selectedUnit: {fileID: 0}
   unitLayerMask:
     serializedVersion: 2
     m_Bits: 128
@@ -1847,6 +1847,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 757093633}
     m_Modifications:
+    - target: {fileID: 7586111342768979637, guid: 50b6685fdf1bb4813a8f0400a8d5873c,
+        type: 3}
+      propertyPath: skill
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586111342768979637, guid: 50b6685fdf1bb4813a8f0400a8d5873c,
+        type: 3}
+      propertyPath: agility
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7785670547301245325, guid: 50b6685fdf1bb4813a8f0400a8d5873c,
         type: 3}
       propertyPath: m_RootOrder
@@ -2452,6 +2462,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 757093633}
     m_Modifications:
+    - target: {fileID: 7586111342768979637, guid: 50b6685fdf1bb4813a8f0400a8d5873c,
+        type: 3}
+      propertyPath: skill
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7785670547301245325, guid: 50b6685fdf1bb4813a8f0400a8d5873c,
         type: 3}
       propertyPath: m_RootOrder
@@ -4182,6 +4197,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 757093633}
     m_Modifications:
+    - target: {fileID: 7586111342768979637, guid: 50b6685fdf1bb4813a8f0400a8d5873c,
+        type: 3}
+      propertyPath: skill
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586111342768979637, guid: 50b6685fdf1bb4813a8f0400a8d5873c,
+        type: 3}
+      propertyPath: agility
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7785670547301245325, guid: 50b6685fdf1bb4813a8f0400a8d5873c,
         type: 3}
       propertyPath: m_RootOrder
@@ -5975,6 +6000,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 757093633}
     m_Modifications:
+    - target: {fileID: 7586111342768979637, guid: 50b6685fdf1bb4813a8f0400a8d5873c,
+        type: 3}
+      propertyPath: agility
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7785670547301245325, guid: 50b6685fdf1bb4813a8f0400a8d5873c,
         type: 3}
       propertyPath: m_RootOrder
@@ -6900,6 +6930,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 757093633}
     m_Modifications:
+    - target: {fileID: 7586111342768979637, guid: 50b6685fdf1bb4813a8f0400a8d5873c,
+        type: 3}
+      propertyPath: skill
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586111342768979637, guid: 50b6685fdf1bb4813a8f0400a8d5873c,
+        type: 3}
+      propertyPath: agility
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7785670547301245325, guid: 50b6685fdf1bb4813a8f0400a8d5873c,
         type: 3}
       propertyPath: m_RootOrder

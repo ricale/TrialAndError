@@ -6,7 +6,7 @@ using UnityEngine;
 public class UnitSelectedVisual : MonoBehaviour
 {
     [SerializeField] private Unit unit;
-    // Start is called before the first frame update
+
     private MeshRenderer meshRenderer;
 
     private void Awake()
