@@ -41,13 +41,13 @@ public class ShootAction : BaseAction
         switch(state)
         {
             case State.Aiming:
-                Vector3 aimDir = (targetUnit.GetWorldPosition() - unit.GetWorldPosition()).normalized;
-                float rotateSpeed = 10f;
-                transform.forward = Vector3.Lerp(
-                    transform.forward,
-                    aimDir,
-                    Time.deltaTime * rotateSpeed
-                );
+                // Vector3 aimDir = (targetUnit.GetWorldPosition() - unit.GetWorldPosition()).normalized;
+                // float rotateSpeed = 10f;
+                // transform.forward = Vector3.Lerp(
+                //     transform.forward,
+                //     aimDir,
+                //     Time.deltaTime * rotateSpeed
+                // );
                 break;
             case State.Shooting:
                 if(canShootBullet)

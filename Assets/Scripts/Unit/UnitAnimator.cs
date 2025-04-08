@@ -8,8 +8,8 @@ public class UnitAnimator : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Transform bulletProjectilePrefab;
     [SerializeField] private Transform shootPointTransform;
-    [SerializeField] private Transform rifleTransform;
-    [SerializeField] private Transform swordTransform;
+    // [SerializeField] private Transform rifleTransform;
+    // [SerializeField] private Transform swordTransform;
 
     private void Awake()
     {
@@ -37,7 +37,7 @@ public class UnitAnimator : MonoBehaviour
     private void SwordAction_OnSwordActionStarted(object sender, EventArgs e)
     {
         // EquipSword();
-        animator.SetTrigger("SwordSlash");
+        animator.SetTrigger("Attack");
     }
 
     private void SwordAction_OnSwordActionCompleted(object sender, EventArgs e)

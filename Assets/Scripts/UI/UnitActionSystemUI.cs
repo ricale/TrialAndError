@@ -25,9 +25,9 @@ public class UnitActionSystemUI : MonoBehaviour
         TurnSystem.Instance.OnTurnChanged += TurnSystem_OnTurnChanged;
         Unit.OnAnyActionPointsChanged += Unit_OnAnyActionPointsChanged;
 
-        // UpdateActionPoints();
-        // CreateUnitActionButtons();
-        // UpdateSelectedVisual();
+        UpdateActionPoints();
+        CreateUnitActionButtons();
+        UpdateSelectedVisual();
     }
 
     private void CreateUnitActionButtons()
@@ -40,6 +40,11 @@ public class UnitActionSystemUI : MonoBehaviour
         actionButtonUIList.Clear();
  
         Unit selectedUnit = UnitActionSystem.Instance.GetSelectedUnit();
+
+        if(!selectedUnit)
+        {
+            return;
+        }
 
         foreach (BaseAction baseAction in selectedUnit.GetBaseActionArray())
         {
